@@ -6,12 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
+        .rainbow-text {
+            display: inline-block;
+            animation: rainbow 4s linear infinite;
+        }
+        @keyframes rainbow {
+            0% { color: violet; }
+            16.666% { color: indigo; }
+            33.333% { color: blue; }
+            50% { color: green; }
+            66.666% { color: yellow; }
+            83.333% { color: orange; }
+            100% { color: red; }
+        }
         body {
+            background-color: rgb(71, 71, 71);
             display: flex;
             align-items: center;
             justify-content: center;
             height: 120vh;
             margin: 0;
+            font-family: 'Sriracha','Urbanist',Arial
         }
 
         .form-container {
@@ -32,6 +47,7 @@
     </style>
     <body>
         <form action="/action_page.php">
+            <span class="rainbow-text">
             <h1>Workshop #html-form</h1>
             <label for="fname">ชื่อ:</label>
             <input type="text" id="fname" name="fname"><br><br>
@@ -56,6 +72,7 @@
             <label for="html"><input type="radio" id="song3" name="song" value="song"> อื่นๆ</label><br><br>
             <label for="vehicle1"><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> ยินยอมให้เก็บข้อมูล</label><br>
             <input type="reset" value="Reset"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="Submit">
+        </span>
     </form>
     <script>
     </script>

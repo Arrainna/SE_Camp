@@ -1,0 +1,66 @@
+.rainbow-text {
+    display: inline-block;
+    animation: rainbow 4s linear infinite;
+}
+@keyframes rainbow {
+    0% { color: violet; }
+    16.666% { color: indigo; }
+    33.333% { color: blue; }
+    50% { color: green; }
+    66.666% { color: yellow; }
+    83.333% { color: orange; }
+    100% { color: red; }
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Sriracha','Urbanist',Arial
+}
+
+.form-container {
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+.center-container {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+.box{
+    color: rgb(0, 0, 0);
+    background-color: rgb(199, 0, 0);
+    text-align: center;
+    border: 5px dashed black;
+    border-radius: 50px;
+    margin: 50px 25px 50px 25px;
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    box-shadow: 0 0 100px rgba(0, 0, 0, 1); /* Add shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+h1 {
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.box:hover{
+    background-color: aqua;
+}
