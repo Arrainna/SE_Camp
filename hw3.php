@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="stylist.css">
     </head>
        <body>
+        <h1><?php echo "Hello World<br><br>";?></h1>
+        
         <?php
         /*<h1>This is PHP <?php echo 'Hello World'; ?>
         <div>
@@ -37,6 +39,8 @@
             
         </div>*/
         ?>
+        <?php
+        /*
         <?php $multi_x = 10; ?>
         <h1>ตารางสูตรคูณแม่ <?php echo $multi_x ?></h1>
         <div>
@@ -57,5 +61,7 @@
             </tbody>
         </table>
         </div>
+        */?>
+
     </body>
     </html>
