@@ -97,9 +97,9 @@ body{
     color: #fff;
     display: inline-block;
     animation: animate 2s linear infinite;
-    width: 48px;
-    height: 48px;
-    text-align: center;line-height: 48px;
+    width: 32px;
+    height: 32px;
+    text-align: center;line-height: 32px;
     border: 1px solid rgba(255,255,255,.4);
     margin: 0 -2.5px;
 }
@@ -110,9 +110,9 @@ body{
     color: #fff;
     display: inline-block;
     animation: animate 2s linear infinite;
-    width: 48px;
-    height: 48px;
-    text-align: center;line-height: 48px;
+    width: 32px;
+    height: 32px;
+    text-align: center;line-height: 32px;
     border: 1px solid rgba(255,255,255,.4);
     margin: 0 -2.5px;
 }
@@ -123,9 +123,9 @@ body{
     color: #fff;
     display: inline-block;
     animation: animate 2s linear infinite;
-    width: 48px;
-    height: 48px;
-    text-align: center;line-height: 48px;
+    width: 32px;
+    height: 32px;
+    text-align: center;line-height: 32px;
     border: 1px solid rgba(255,255,255,.4);
     margin: 0 -2.5px;
 }
@@ -290,11 +290,6 @@ body{
 .glowing-3 span:nth-child(10)
 {
     animation-delay: 0.9s;
-}
-span{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
 }
 h1 {
     text-align: center;
