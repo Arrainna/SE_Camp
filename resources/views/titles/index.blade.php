@@ -3,6 +3,39 @@
 @section('title', 'Titles')
 
 @section('content')
+@section('js')
+    <script>
+        function deleteme(id) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+            $.ajax({
+                method: "POST",
+                url: "/titles/" + id,
+                data: {
+                _token: "{{ csrf_token() }}",
+                _method: "DELETE"
+                }
+            })
+                .done(function() {
+                Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success"
+                });
+            });
+            }
+        });
+        }
+    </script>
+@endsection
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -93,7 +126,9 @@
                                         <td>
                                             <a href="{{ url('/titles/' . $title->tit_id) }}"
                                                 class="btn btn-warning">แก้ไข</a>
-                                            <form method="post" action="/titles/{{ $title->tit_id }}">
+                                            <button type = "button" class="btn btn-danger"
+                                                onclick="deleteme({{ $title->tit_id }})">ลบ</button>
+                                            <form method="post" action="/titles/{{ $title->tit_id }}" method="post" action="/title/{{$title->tit_id}}">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">ลบ</button>
